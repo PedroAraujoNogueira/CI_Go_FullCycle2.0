@@ -1,0 +1,27 @@
+# Pode ser qualquer name.
+name: ci-golang-workflow
+
+# No "on" vamos dizer o evento que vai acionar nosso processo de CI.
+on: [push]
+
+jobs: 
+  # check-application é o nome do nosso job, porém poderia ter qualquer outro nome.
+  check-application: 
+    # runs-on vai dizer em qual ambiente nós queremos rodar nossa aplicação.
+    runs-on: ubuntu-latest
+    # steps são os passos que serão executados.
+    steps: 
+      # Essa Action pega os dados do meu repositório e baixa no meu ambiente, no meu caso, um
+      # ubuntu na ultima versão. Para mais informações você pode consultar o repositório dessa
+      # Action: https://github.com/actions/checkout
+      - uses: actions/checkout@v2
+      # Essa Action vai preparar o ambiente Go para que possamos executar nosso código, para
+      # mais informações você pode acessar o repositório dessa Action:
+      # https://github.com/actions/setup-go
+      - uses: actions/setup-go@v2
+        with: 
+          # Estamos passando um parâmetro para nossa action "setup-go@v2". Estamos dizendo
+          # qual versão do Go queremos utilizar.
+          go-version: 1.15
+      - run: go test
+      - run: go run math.go

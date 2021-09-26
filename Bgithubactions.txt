@@ -5,7 +5,7 @@ tarefas, incluindo o processo de CI.
 Características do Workflow:
 1. Um conjunto de processos definidos por nós. Ex: Fazer o Build + rodar os testes 
 da aplicação.
-2. São definidos em arquivos .yml dentro de uma pasta oculta chamada .github/workflows.
+2. São definidos em arquivos .yaml dentro de uma pasta oculta chamada .github/workflows.
 3. Possui um ou mais "Jobs".
 4. É iniciado baseado em Eventos do GitHub ou através de agendamento.
 OBS: é possível ter mais de um workflow por repositório.
@@ -21,10 +21,14 @@ Ações -> É a ação que será executada em um dos Steps de um Job em um Workf
 steps: 
     -uses: action/run-composer 
     -run: npm run prod.
-OBS: "uses" é quando nós pegamos uma action(um código desenvolvido por alguém que 
+OBS: Quando queremos usar uma Action usamos "uses" e quando queremos rodar um comando 
+usamos "run".
+OBS1: "uses" é quando nós pegamos uma Action(um código desenvolvido por alguém que 
 podemos colocar no uses e então vai ser executado o código no padrão do GitHub Actions) 
 do GitHub, seja ela criada por nós ou pegas através do marketplace do GitHub.
 Uma action pode ser desenvolvida em Javascript ou uma imagem Docker.
+OBS2: o GitHub possui um usuário chamado actions e dentro desse usuário tem vários 
+repositórios que podemos usar no step "uses".
 
 Custo:
 O uso de GitHub Actions é grátis tanto para repositórios públicos quanto para
