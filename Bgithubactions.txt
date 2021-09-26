@@ -1,0 +1,36 @@
+O GitHub Actions é um automatizador de workflow de desenvolvimento de software. Ele 
+utiliza os principais eventos gerados pelo github para que possamos executar
+tarefas, incluindo o processo de CI.
+
+Características do Workflow:
+1. Um conjunto de processos definidos por nós. Ex: Fazer o Build + rodar os testes 
+da aplicação.
+2. São definidos em arquivos .yml dentro de uma pasta oculta chamada .github/workflows.
+3. Possui um ou mais "Jobs".
+4. É iniciado baseado em Eventos do GitHub ou através de agendamento.
+OBS: é possível ter mais de um workflow por repositório.
+
+Então temos um evento, nesse evento podemos ter filtros, depois selecionamos o ambiente que 
+queremos rodar nossa aplicação e por último vamos escolher quais Actions serão 
+executadas para a gente.
+Exemplo:
+Evento -> Um push no repositório. 
+Filtros -> somente na branch master.
+Ambiente -> Máquina Ubuntu. 
+Ações -> É a ação que será executada em um dos Steps de um Job em um Workflow.  
+steps: 
+    -uses: action/run-composer 
+    -run: npm run prod.
+OBS: "uses" é quando nós pegamos uma action(um código desenvolvido por alguém que 
+podemos colocar no uses e então vai ser executado o código no padrão do GitHub Actions) 
+do GitHub, seja ela criada por nós ou pegas através do marketplace do GitHub.
+Uma action pode ser desenvolvida em Javascript ou uma imagem Docker.
+
+Custo:
+O uso de GitHub Actions é grátis tanto para repositórios públicos quanto para
+executores auto-hospedados. Para repositórios privados, cada conta GitHub recebe
+uma certa quantidade de minutos e armazenamento gratuitos, dependendo do produto usado
+com a conta. Qualquer uso para além dos montantes incluídos é controlado por limites de 
+despesa.
+Para mais informações sobre o preço podemos ver nesse link:
+https://docs.github.com/pt/billing/managing-billing-for-github-actions/about-billing-for-github-actions

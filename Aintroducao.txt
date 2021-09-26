@@ -1,0 +1,21 @@
+Integração contínua é o processo de integrar modificações do codebase de 
+forma contínua e automatizada, evitando assim erros humanos de verificação, garantindo
+mais agilidade e segurança no processo de desenvolvimento de um software.
+
+Principais processos:
+1. Execução de testes.
+2. Linter, para garantir a padronização do código.
+3. Verificações de qualidade de código, por exemplo, verificar se o código tem 
+blocos repetidos.
+4. Verificações de segurança, como verificar se informações sensíveis estão em 
+variáveis de ambiente.
+5. Geração de artefatos prontos para o processo de deploy, por exemplo, gerar uma imagem Docker
+e subir no CR(Container Registry) ou gerar um zip, ou seja, geramos artefatos que vão nos 
+ajudar no processo de deploy futuramente.
+6. Geração de tags e releases.
+
+OBS: então podemos fazer com que um Pull Request não seja mergeado sem antes ter
+passado pelo processo de CI.
+
+Ferramentas populares de CI: Jenkins, GitHub Actions, Circle CI, AWS Code Build, 
+Azure Devops, Google Cloud Build, GitLab Pipelines/CI.
