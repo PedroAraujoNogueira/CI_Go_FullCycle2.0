@@ -15,6 +15,12 @@ jobs:
   check-application: 
     # runs-on vai dizer em qual ambiente nós queremos rodar nossa aplicação.
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # os: [ubuntu-18.04, ubuntu-20.04]
+        go: [1.14, 1.15]
+
     # steps são os passos que serão executados.
     steps: 
       # Essa Action pega os dados do meu repositório e baixa no meu ambiente, no meu caso, um
@@ -28,6 +34,8 @@ jobs:
         with: 
           # Estamos passando um parâmetro para nossa action "setup-go@v2". Estamos dizendo
           # qual versão do Go queremos utilizar.
-          go-version: 1.15
+          # Antes estavamos usando a versão fixa "go-version: 1.15", com o Strategy Matrix
+          # podemos fazer o teste com varias versões diferentes.
+          go-version: ${{ matrix.go }} # go-version: 1.15
       - run: go test
       - run: go run math.go
