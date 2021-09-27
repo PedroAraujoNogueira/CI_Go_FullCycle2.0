@@ -1,0 +1,12 @@
+Para criarmos nosso primeiro Workflow utilizando GitHub Actions: 
+1. Crie um repositório.
+2. Crie uma pasta no seu projeto chamada ".github/workflows".
+3. Crie um arquivo .yaml dentro da pasta ".github/workflows". É nesse arquivo onde vamos
+configurar nossa CI.
+4. Olhe como foi feito o arquivo ci.yaml.
+5. Dê um push no seu arquivo .yaml.
+6. Vá no seu repositório do GitHub na parte de Actions e veja que todos os seus workflows 
+estão ali. Veja os workflows que foram executados e qual o status da execução. Clicando
+no workflow poderemos também ver os status ta execução dos jobs daquele workflow e 
+clicando no Job poderemos ver detalhes do que aquele job executou e quanto tempo demorou 
+para executar.

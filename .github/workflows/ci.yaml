@@ -2,7 +2,13 @@
 name: ci-golang-workflow
 
 # No "on" vamos dizer o evento que vai acionar nosso processo de CI.
-on: [push]
+# on: [push] , Inicialmente usamos o evento push mas após isso trocamos para 
+# pull_request e podemos ver mais sobre os eventos no link:
+# https://docs.github.com/pt/actions/learn-github-actions/events-that-trigger-workflows
+on:
+  pull_request:
+    branches:
+      - develop
 
 jobs: 
   # check-application é o nome do nosso job, porém poderia ter qualquer outro nome.
