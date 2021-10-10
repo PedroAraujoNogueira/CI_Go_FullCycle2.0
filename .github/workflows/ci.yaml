@@ -40,15 +40,28 @@ jobs:
       - run: go test
       - run: go run math.go
 
+      # Essa Action vai nos ajudar a setar o ambiente docker na nossa máquina.
+      # Para mais informações sobre essa action podemos acessar esse link:
+      # https://github.com/docker/setup-qemu-action
+      # O name que usamos em um step é apenas uma pequena descrição.
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       
+      # Essa Action é usada para o docker conseguir fazer o build da nossa imagem.
+      # Para mais informações podemos acessar esse link:
+      # https://github.com/docker/setup-buildx-action 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
+      # Note que esse Step possui um 'id', dessa forma conseguimos pegar o resultado 
+      # dessa Action e utilizar dentro de outro step.
+      # Essa Action vai de fato buildar nosso Dockerfile e depois dar um push 
+      # no DockerHub ou algum container registry, caso o "push" esteja como true.
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
         with:
+          # Se "push" estiver como false então a Action fará apenas o build da imagem.
           push: false
+          # Em tags colocaremos o usuarioDoDockerHub/nomeDaImagem
           tags: pedroaraujonogueira/fullcycle2.0-ci-go:latest
