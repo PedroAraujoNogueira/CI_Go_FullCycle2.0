@@ -23,3 +23,7 @@ Após fazer o PR no GitHub verifique que foi criado um novo repositório no seu 
 
 Para testar a imagem use o comando:
 docker run --rm nomeDaImagem
+
+Resumo do que aprendemos:
+Desenvolver um software, rodar testes automaticamente a cada push e após os testes
+terem dado sucesso conseguimos buildar a imagem e subir para o DockerHub.
