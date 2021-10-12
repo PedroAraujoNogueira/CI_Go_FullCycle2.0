@@ -18,3 +18,8 @@ DOCKERHUB_USERNAME e DOCKERHUB_TOKEN
 6.4. Clique em Security.
 6.5. Clique em New Access Token e escolha uma palavra chave que gerará seu token.
 6.6. Guarde seu Token e coloque como valor no DOCKERHUB_TOKEN no GitHub. 
+
+Após fazer o PR no GitHub verifique que foi criado um novo repositório no seu DockerHub.
+
+Para testar a imagem use o comando:
+docker run --rm nomeDaImagem
