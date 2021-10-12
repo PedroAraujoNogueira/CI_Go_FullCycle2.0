@@ -1,0 +1,20 @@
+Vamos fazer o build da imagem através do nosso arquivo ci.yaml.
+
+Uma ótima forma de trabalharmos com docker juntamente com o GitHub Actions é usando 
+as actions presente nesse link:
+https://github.com/marketplace/actions/build-and-push-docker-images
+
+Para adicionarmos secrets no GitHub temos que:
+1. Ir no repositório que queremos.
+2. Ir em settings.
+3. Clicar em secrets.
+4. Clicar em new repository secret.
+5. Colocamos o Name e o Valor do secret. No nosso caso os Names vão ser 
+DOCKERHUB_USERNAME e DOCKERHUB_TOKEN
+6. Para gerarmos um Token no DockerHub, temos que:
+6.1. Entrar no DockerHub.
+6.2. Clicar no canto superior direito. 
+6.3. Clicar em Account Settings.
+6.4. Clique em Security.
+6.5. Clique em New Access Token e escolha uma palavra chave que gerará seu token.
+6.6. Guarde seu Token e coloque como valor no DOCKERHUB_TOKEN no GitHub. 

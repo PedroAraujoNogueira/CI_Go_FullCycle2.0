@@ -1,5 +1,0 @@
-Vamos fazer o build da imagem através do nosso arquivo ci.yaml.
-
-Uma ótima forma de trabalharmos com docker juntamente com o GitHub Actions é usando 
-as actions presente nesse link:
-https://github.com/marketplace/actions/build-and-push-docker-images
