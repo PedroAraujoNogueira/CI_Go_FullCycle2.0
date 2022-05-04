@@ -22,7 +22,6 @@ jobs:
         go: [1.14, 1.15]
 
     # steps são os passos que serão executados.
-    
     steps: 
       # Essa Action pega os dados do meu repositório e baixa no meu ambiente, no meu caso, um
       # ubuntu na ultima versão. Para mais informações você pode consultar o repositório dessa
