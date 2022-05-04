@@ -1,0 +1,4 @@
+Podemos usar o GitHub Actions para todas as vezes que mergearmos algo em Staging 
+ou em Prod seja feito algo no Jira(Colocar uma mensagem no card do Jira e passar para 
+testes por exemplo) e seja colocada uma mensagem em um grupo do Slack.
+

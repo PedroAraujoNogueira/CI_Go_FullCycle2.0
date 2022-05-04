@@ -1,6 +1,0 @@
-Para criarmos nosso primeiro Workflow utilizando GitHub Actions: 
-1. Crie um repositório.
-2. Crie uma pasta no seu projeto chamada ".github/workflows".
-3. Crie um arquivo .yaml dentro da pasta ".github/workflows". É nesse arquivo onde vamos
-configurar nossa CI.
-4. Olhe como foi feito o arquivo ci.yaml.

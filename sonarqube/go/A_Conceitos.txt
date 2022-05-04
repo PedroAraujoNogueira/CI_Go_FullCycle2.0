@@ -1,0 +1,23 @@
+O Sonarqube é uma ferramenta automática de revisão de código para detectar bugs, 
+vulnerabilidades e "mals cheiros" em seu código. Ele pode se integrar ao seu fluxo de 
+trabalho existente para permitir a inspeção contínua de código em todas as ramificações 
+do projeto e solicitações de pull. 
+
+O Sonarqube é uma ferramenta open source, porém tem versões pagas. 
+O Sonarqube também possui uma versão nas nuvens, sendo assim não precisaríamos 
+instalá-lo em alguma máquina.
+
+Podemos instalar o sonarqube com uma imagem Docker usando: 
+docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
+Após executar o comando acima acesse localhost:9000 no navegador.
+Para outras informações sobre a instalação podemos acessar a documentação do Sonarqube:
+https://docs.sonarqube.org/latest/setup/get-started-2-minutes/
+
+No título Rules vamos achar as regras que determinam o que será considerado como 
+certo ou errado e essas regras variam de acordo com a linguagem. Além da linguagem 
+também podemos filtrar por tipos de bugs e outros filtros.
+
+No título Quality Profiles podemos fazer um perfil que será composto por
+um conjunto de regras que queremos validar.
+
+No título Quality Gates teremos os requisitos de aceite de qualidade.

@@ -1,0 +1,12 @@
+1. Com Strategy Matrix podemos definir uma matriz de diferentes configurações de trabalho.
+Uma matriz permite que você crie vários trabalhos que realizam a substituição de variável 
+em uma definição de trabalho único. Por exemplo, você pode usar uma matriz para criar trabalhos
+para mais de uma versão compatível de uma linguagem de programação, sistema operacional 
+ou ferramenta. Uma matriz reutiliza a configuração do trabalho e cria trabalho para cada matriz
+que você configurar. Podemos ver exemplos na doc do GitHub:
+https://docs.github.com/pt/actions/reference/workflow-syntax-for-github-actions
+
+OBS: ao trocarmos uma versão fixa pelo Strategy Matrix temos que lembrar de trocar as
+Settings do GitHub para que o Job que servirá como status check seja modificado também,
+pois o Job que usa a versão fixa não irá mais existir, impedindo que o status check 
+seja concluído com sucesso e que possamos fazer nosso merge.

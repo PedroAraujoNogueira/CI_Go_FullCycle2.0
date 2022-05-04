@@ -3,8 +3,8 @@ package main
 import "testing"
 
 // Para rodar um teste em Go basta irmos no diretório do nosso pacote e digitar no terminal
-// o comando "go test". Com isso, Go encontrará todos os arquivos com o sufixo "_test.go"
-// e todas as funções iniciadas com Test e as executará.
+// o comando "go mod init firstappgo" e em seguida "go test". Com isso, Go encontrará todos 
+// os arquivos com o sufixo "_test.go" e todas as funções iniciadas com Test e as executará.
 func TestSoma(t *testing.T) {
 
 	total := Soma(15, 15)

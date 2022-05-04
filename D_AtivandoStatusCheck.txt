@@ -1,0 +1,17 @@
+Vamos ativar o Status Check:
+1. Primeiro criamos uma branch develop.
+2. No repositorio do GitHub -> Settings -> Branches -> Mude o Default Branch para develop.
+3. Add Rule 
+4. Branch name pattern = develop
+5. Marque a opção "Require status checks to pass before merging", 
+"Require branches to be up to date before merging" e pesquise pelo 
+nome do seu Job que servirá como status check.
+6. Faça a mesma coisa para branch main.
+7. Feito isso, só será permitido fazer o merge após o status check ter sido concluído 
+com sucesso.
+8. Crie uma nova branch e suba o código fazendo uma PR. Você verá que só será possível 
+fazer o merge se o status check for aprovado.
+9. Após o status check ter sido concluído com sucesso você verá a mensagem 
+All checks have passed e mais a direita na mesma linha terá Show all checks. 
+Clicando em Show all checks você poderá ver detalhes de cada Job executado 
+clicando em details.

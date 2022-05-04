@@ -3,10 +3,10 @@ utiliza os principais eventos gerados pelo github para que possamos executar
 tarefas, incluindo o processo de CI.
 
 Características do Workflow:
-1. Um conjunto de processos definidos por nós. Ex: Fazer o Build + rodar os testes 
-da aplicação.
+1. O Workflow é um conjunto de processos definidos por você. Ex: Fazer o Build + rodar 
+os testes da aplicação.
 2. São definidos em arquivos .yaml dentro de uma pasta oculta chamada .github/workflows.
-3. Possui um ou mais "Jobs".
+3. Cada Workflow possui um ou mais "Jobs".
 4. É iniciado baseado em Eventos do GitHub ou através de agendamento.
 OBS: é possível ter mais de um workflow por repositório.
 
@@ -26,15 +26,18 @@ usamos "run".
 OBS1: "uses" é quando nós pegamos uma Action(um código desenvolvido por alguém que 
 podemos colocar no uses e então vai ser executado o código no padrão do GitHub Actions) 
 do GitHub, seja ela criada por nós ou pegas através do marketplace do GitHub.
-Uma action pode ser desenvolvida em Javascript ou uma imagem Docker.
 OBS2: o GitHub possui um usuário chamado actions e dentro desse usuário tem vários 
 repositórios que podemos usar no step "uses".
 
+ACTIONS:
+1. Actions é a ação que de fato será executada em um dos Steps de um Job em um Workflow.
+2. A Action pode ser criada do zero ou ser reutilizada de actions pré-existentes.
+3. Uma Action pode ser desenvolvida em Javascript ou uma imagem Docker.
+
 Custo:
-O uso de GitHub Actions é grátis tanto para repositórios públicos quanto para
-executores auto-hospedados. Para repositórios privados, cada conta GitHub recebe
-uma certa quantidade de minutos e armazenamento gratuitos, dependendo do produto usado
-com a conta. Qualquer uso para além dos montantes incluídos é controlado por limites de 
-despesa.
+O uso de GitHub Actions é grátis tanto para repositórios públicos quanto para executores 
+auto-hospedados. Para repositórios privados, cada conta GitHub recebe uma certa quantidade
+de minutos e armazenamento gratuitos, dependendo do produto usado 
+com a conta. Qualquer uso para além dos montantes incluídos é controlado por limites de despesa. 
 Para mais informações sobre o preço podemos ver nesse link:
 https://docs.github.com/pt/billing/managing-billing-for-github-actions/about-billing-for-github-actions
