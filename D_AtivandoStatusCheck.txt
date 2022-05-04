@@ -1,4 +1,5 @@
 Vamos ativar o Status Check:
+
 1. Primeiro criamos uma branch develop.
 2. No repositorio do GitHub -> Settings -> Branches -> Mude o Default Branch para develop.
 3. Add Rule 
